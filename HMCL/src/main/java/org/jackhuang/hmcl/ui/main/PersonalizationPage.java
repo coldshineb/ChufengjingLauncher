@@ -211,7 +211,7 @@ public class PersonalizationPage extends StackPane {
                     }
                 }
 
-                Label lblFontDisplay = new Label("Gennokioku Launcher");
+                Label lblFontDisplay = new Label("Chufengjing Launcher");
                 lblFontDisplay.fontProperty().bind(Bindings.createObjectBinding(
                         () -> Font.font(config().getLauncherFontFamily(), 12),
                         config().launcherFontFamilyProperty()));

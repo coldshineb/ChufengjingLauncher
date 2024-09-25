@@ -34,8 +34,8 @@ public class AboutPage extends StackPane {
         ComponentList about = new ComponentList();
         {
             IconedTwoLineListItem launcher = new IconedTwoLineListItem();
-            launcher.setImage(FXUtils.newBuiltinImage("/assets/img/gennokioku.png", 32, 32, false, true));
-            launcher.setTitle("Gennokioku 启动器");
+            launcher.setImage(FXUtils.newBuiltinImage("/assets/img/chufengjing.png", 32, 32, false, true));
+            launcher.setTitle("初风境启动器");
             launcher.setSubtitle(Metadata.VERSION);
 
             about.getContent().setAll(launcher);

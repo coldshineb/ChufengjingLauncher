@@ -159,27 +159,6 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
             launcherSettingsItem.setTitle(i18n("settings"));
             launcherSettingsItem.setOnAction(e -> Controllers.navigate(Controllers.getSettingsPage()));
 
-            // help-navigation
-            AdvancedListItem helpNavigationItem = new AdvancedListItem();
-            helpNavigationItem.setLeftGraphic(wrap(SVG.HELP_CIRCLE_OUTLINE));
-            helpNavigationItem.setActionButtonVisible(false);
-            helpNavigationItem.setTitle(i18n("gennokioku.help_navigation"));
-            helpNavigationItem.setOnAction(e -> FXUtils.openLink("https://wiki.gennokioku.city/help-navigation"));
-
-            // terms
-            AdvancedListItem termsItem = new AdvancedListItem();
-            termsItem.setLeftGraphic(wrap(SVG.BOOK_OUTLINE));
-            termsItem.setActionButtonVisible(false);
-            termsItem.setTitle(i18n("gennokioku.terms"));
-            termsItem.setOnAction(e -> FXUtils.openLink("https://wiki.gennokioku.city/terms"));
-
-            // changelog
-            AdvancedListItem changelogItem = new AdvancedListItem();
-            changelogItem.setLeftGraphic(wrap(SVG.STAR_OUTLINE));
-            changelogItem.setActionButtonVisible(false);
-            changelogItem.setTitle(i18n("gennokioku.changelog"));
-            changelogItem.setOnAction(e -> FXUtils.openLink("https://wiki.gennokioku.city/changelog"));
-
             // the left sidebar
             AdvancedListBox sideBar = new AdvancedListBox()
                     .startCategory(i18n("account").toUpperCase(Locale.ROOT))
@@ -187,11 +166,7 @@ public class RootPage extends DecoratorAnimatedPage implements DecoratorPage {
                     .startCategory(i18n("version").toUpperCase(Locale.ROOT))
                     .add(gameListItem)
                     .startCategory(i18n("settings.launcher.general").toUpperCase(Locale.ROOT))
-                    .add(launcherSettingsItem)
-                    .startCategory("Gennokioku")
-                    .add(helpNavigationItem)
-                    .add(termsItem)
-                    .add(changelogItem);
+                    .add(launcherSettingsItem);
 
             // the root page, with the sidebar in left, navigator in center.
             setLeft(sideBar);
